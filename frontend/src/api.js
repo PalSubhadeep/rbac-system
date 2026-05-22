@@ -7,7 +7,7 @@ import axios from "axios";
 // Create an axios instance with the base URL of our backend
 const api = axios.create({
   // In production use Render URL, in development use localhost
-  baseURL: process.env.REACT_APP_API_URL || "http://localhost:10000/api",
+  baseURL: process.env.REACT_APP_API_URL || "https://rbac-system-k0b2.onrender.com",
 });
 
 // "Interceptor" — runs before every request automatically
