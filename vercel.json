@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm install && npx react-scripts build",
+  "buildCommand": "rm -rf node_modules && npm install && npx react-scripts build",
   "outputDirectory": "build",
-  "installCommand": "npm install"
+  "installCommand": "echo skip"
 }
