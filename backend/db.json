@@ -53,8 +53,22 @@
       "action": "ACCESS:GET",
       "target": "/api/users",
       "timestamp": "2026-05-21T17:45:38.250Z"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "action": "LOGIN",
+      "target": "auth/login",
+      "timestamp": "2026-05-22T04:00:27.485Z"
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "action": "ACCESS:GET",
+      "target": "/api/users",
+      "timestamp": "2026-05-22T04:00:27.512Z"
     }
   ],
   "nextUserId": 4,
-  "nextLogId": 3
+  "nextLogId": 5
 }

@@ -57,17 +57,9 @@ cd rbac-app
 
 ### Step 2 — Install all dependencies
 ```bash
-cd backend
-npm install
-npm start
-```
-The backend runs at **http://localhost:5000**
-
-### Step 3 — Start the Frontend (new terminal)
-```bash
-cd frontend
-npm install
-npm start
+npm install 
+npm run install-all   # installs packages for both backend & frontend
+npm start             # starts BOTH servers simultaneously
 ```
 The frontend runs at **http://localhost:3000**
 
