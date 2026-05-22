@@ -6,7 +6,8 @@ import axios from "axios";
 
 // Create an axios instance with the base URL of our backend
 const api = axios.create({
-  baseURL: "http://localhost:5000/api", // all requests go to our Express server
+  // In production use Render URL, in development use localhost
+  baseURL: process.env.REACT_APP_API_URL || "http://localhost:10000/api",
 });
 
 // "Interceptor" — runs before every request automatically
