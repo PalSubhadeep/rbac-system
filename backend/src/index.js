@@ -15,7 +15,13 @@ const PORT = process.env.PORT || 5000;
 // cors() allows the React frontend (localhost:3000) to talk to this backend (localhost:5000)
 // Without this, the browser would block cross-origin requests
 app.use(cors({
-  origin: ["http://localhost:3000", "https://rbac-system-964qjdcrn-subhadeep-pal-s-projects.vercel.app"],
+  origin: function(origin, callback) {
+    if (!origin || origin.endsWith('.vercel.app') || origin === 'http://localhost:3000') {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
