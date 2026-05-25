@@ -22,7 +22,7 @@ function verifyToken(req, res, next) {
 function requireRole(...allowedRoles) {
   return (req, res, next) => {
     const userRole = req.user.role;
-
+// checks if the role has the access to the page
     if (!allowedRoles.includes(userRole)) {
       return res.status(403).json({
         message: `Access denied. Required role: ${allowedRoles.join(" or ")}`
