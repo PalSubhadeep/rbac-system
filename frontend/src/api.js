@@ -15,7 +15,7 @@ const api = axios.create({
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
   if (token) {
-    // "Bearer" is a standard prefix for JWT tokens in Authorization header
+    // "Bearer" is a standard prefix for JWT tokens in Authorization header , this barer sends the jwt token with every api request
     config.headers.Authorization = `Bearer ${token}`;
   }
   return config;
