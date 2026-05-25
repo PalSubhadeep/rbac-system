@@ -2,6 +2,7 @@ const jwt = require("jsonwebtoken");
 const { dbHelpers } = require("../config/database");
 
 function verifyToken(req, res, next) {
+  // It checks the jwt token before giving them the access
   const authHeader = req.headers["authorization"];
   const token = authHeader && authHeader.split(" ")[1];
 
