@@ -52,6 +52,8 @@ router.post("/login", (req, res) => {
 
   const role = dbHelpers.getRoleName(user.role_id);
 
+  //JWT token created
+
   const token = jwt.sign(
     { id: user.id, name: user.name, email: user.email, role },
     process.env.JWT_SECRET || "secret_key_change_in_prod",
